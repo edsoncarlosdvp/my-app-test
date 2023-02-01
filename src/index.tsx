@@ -1,28 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App';
-import { ClientForm } from './Components/client/ClientForm';
-import { Counter } from './Components/counter/counter';
+import { RouterProvider } from 'react-router-dom';
 import './index.css';
 import Store from './Redux/Store';
 import reportWebVitals from './reportWebVitals';
+import router from './router/router';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      { path: "contador", element: <Counter /> },
-      { path: "cliente", element: <ClientForm /> },
-    ],
-  },
-]);
 
 root.render(
   <React.StrictMode>

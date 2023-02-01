@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { loginClient, logoutClient } from "../../Redux/Client/ClientSlice";
+import { loginClient, logoutClient } from "../Redux/Client/ClientSlice";
 
 export const ClientForm = (): JSX.Element => {
     const dispatch = useDispatch();

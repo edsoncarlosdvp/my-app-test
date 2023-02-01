@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment } from "../../Redux/Stock/Slice";
-import { RootState } from "../../Redux/Store";
+import { decrement, increment } from "../Redux/Stock/Slice";
+import { RootState } from "../Redux/Store";
 
 export const Counter = () => {
     const dispatch = useDispatch();
