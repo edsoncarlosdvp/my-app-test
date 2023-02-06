@@ -3,6 +3,7 @@ import App from "../App";
 import { ClientForm } from "../pages/clientForm";
 import { Counter } from "../pages/counter";
 import { Error } from "../pages/error";
+import { ListItem } from "../pages/listItem";
 
 
 const router = createBrowserRouter([
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
     children: [
       { path: "contador", element: <Counter /> },
       { path: "cliente", element: <ClientForm /> },
+      { path: "lista", element: <ListItem /> },
     ],
   },
 ]);

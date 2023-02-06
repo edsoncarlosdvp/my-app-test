@@ -9,6 +9,7 @@ const Container = styled.ul`
 
 const Item = styled.li`
   background: none;
+  padding: 10px;
 `;
 
 export { Container, Item };
