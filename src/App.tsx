@@ -1,7 +1,7 @@
 import Grid from '@mui/material/Grid';
 import { Outlet } from 'react-router-dom';
-import './App.css';
 import { Navigation } from './Components/NavLink/navigation';
+import './styles/App.css';
 import './styles/global.css';
 
 function App() {
@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <Grid container xs={12}>
         <Navigation />
+        <Outlet />
       </Grid>
-      <Outlet />
     </div>
   );
 }

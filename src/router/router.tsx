@@ -1,22 +1,19 @@
-import { createBrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "../App";
 import { ClientForm } from "../pages/clientForm";
 import { Counter } from "../pages/counter";
-import { Error } from "../pages/error";
-import { ListItem } from "../pages/listItem";
+import { List } from "../pages/list";
 
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    errorElement: <Error />,
-    element: <App />,
-    children: [
-      { path: "contador", element: <Counter /> },
-      { path: "cliente", element: <ClientForm /> },
-      { path: "lista", element: <ListItem /> },
-    ],
-  },
-]);
-
-export default router;
+export const Router = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="contador" element={<Counter />} />
+          <Route path="cliente" element={<ClientForm />} />
+          <Route path="lista" element={<List />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  )
+}

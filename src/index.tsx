@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { RouterProvider } from 'react-router-dom';
-import './index.css';
+import '../src/styles/index.css';
 import Store from './Redux/Store';
 import reportWebVitals from './reportWebVitals';
-import router from './router/router';
+import { Router } from './router/router';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,7 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={Store}>
-      <RouterProvider router={router} />
+      <Router />
     </Provider>
   </React.StrictMode>
 );
