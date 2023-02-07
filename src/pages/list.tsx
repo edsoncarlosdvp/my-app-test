@@ -1,4 +1,6 @@
-import { Box, Grid, TextField } from "@mui/material"
+import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
+import { Box, Button, Grid, TextField } from "@mui/material";
 
 export const List = (): JSX.Element => {
     return (
@@ -12,6 +14,10 @@ export const List = (): JSX.Element => {
                         flexDirection: "column"
                     }}>
                     <TextField id="outlined-basic" label="Item" variant="outlined" style={{ margin: "1.5rem 0", }} />
+                    <Grid container direction={'row'} justifyContent="space-between" mb={3}>
+                        <Button variant="contained" color="primary" startIcon={<SendIcon />}>Adicionar</Button>
+                        <Button variant="contained" color="error" startIcon={<DeleteIcon />}>Remover</Button>
+                    </Grid>
                     <TextField
                         id="outlined-multiline-static"
                         label="Lista de itens"
