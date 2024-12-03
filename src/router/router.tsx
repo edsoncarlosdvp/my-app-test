@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "../App";
+import ListText from "../Components/ListTest/ListText";
 import { ClientForm } from "../pages/clientForm";
 import { Counter } from "../pages/counter";
 import { Fetch } from "../pages/fetch";
@@ -18,6 +19,7 @@ export const Router = () => {
           <Route path="timer" element={<Timer />} />
           <Route path="fetch" element={<Fetch />} />
           <Route path="resultados" element={<SearchResults />} />
+          <Route path="list" element={<ListText />} />
         </Route>
       </Routes>
     </BrowserRouter>
